@@ -1,9 +1,11 @@
 <h4 class="menu-title">
-  Guidance
+  <a href="{{ site.baseurl }}/guidance/components/">
+    Components
+  </a>
 </h4>
 <nav class="menu docs-menu">
   {% for page in site.pages %}
-    {% if page.categories contains 'guidance' %}
+    {% if page.categories contains 'components' %}
     <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
       {{ page.title }}
     </a>
@@ -11,9 +13,10 @@
   {% endfor %}
 </nav>
 
-
 <h4 class="menu-title">
-  Components
+  <a href="{{ site.baseurl }}/guidance/utilities/">
+    Utilities
+  </a>
 </h4>
 <nav class="menu docs-menu">
   <a class="menu-item {% if page.title == "Button" %}selected{% endif %}" href="{{ site.baseurl }}/components/button/">
@@ -59,7 +62,7 @@
     TextInput
   </span>
   {% for page in site.pages %}
-    {% if page.categories contains 'components' %}
+    {% if page.categories contains 'utilities' %}
     <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
       {{ page.title }}
     </a>
@@ -67,13 +70,12 @@
   {% endfor %}
 </nav>
 
-
 <h4 class="menu-title">
-  Utilities
+  Guidance
 </h4>
 <nav class="menu docs-menu">
   {% for page in site.pages %}
-    {% if page.categories contains 'utilities' %}
+    {% if page.categories contains 'guidance' %}
     <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
       {{ page.title }}
     </a>
