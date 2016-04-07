@@ -120,10 +120,9 @@
 
 .Card-header-title {
   @include font-size(large);
-  @include Heading(#fff, editorial, x-large, default, normal);
+  @include Heading(#fff, default, x-large, light, default);
+  margin-bottom: 0;
   color: #fff;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 /**
