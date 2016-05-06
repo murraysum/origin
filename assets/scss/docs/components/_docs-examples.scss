@@ -208,6 +208,10 @@
   @include background-color(gray-16);
 }
 
+.DocsExample-preview--fa-white {
+  @include background-color(fa-white);
+}
+
 
 /*
  * `border` examples
