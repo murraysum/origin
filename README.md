@@ -150,11 +150,11 @@ The linter is configured via [`.scss-lint.yml`](https://github.com/fac/origin/bl
 
 #### Get your PR reviewed, merge to master, create new release
 
-5. Ask a fellow designer or engineer to review your changes. Make any required changes, then merge your branch into master: `git checkout master; git merge --no-ff <your-branch-name>`
-6. Push up the new version of master (`git push origin master`).
-7. Publish any documentation changes to http://fac.github.io/origin: `grunt publish`
-8. [Create a new release](https://help.github.com/articles/creating-releases/) with a useful description. Your original PR is probably a good starting point. **If you’re making breaking changes, provide guidance in the release notes about what people will have to change in their projects**
-9. [Publish the NPM package](https://docs.npmjs.com/getting-started/publishing-npm-packages) (`npm publish`). If you don't yet have access to update the npm package, have someone in the design team [add you as an owner](https://docs.npmjs.com/cli/owner).
+1. Ask a fellow designer or engineer to review your changes. Make any required changes, then merge your branch into master: `git checkout master; git merge --no-ff <your-branch-name>`
+2. Push up the new version of master (`git push origin master`).
+3. [Create a new release](https://help.github.com/articles/creating-releases/) with a useful description. Your original PR is probably a good starting point. **If you’re making breaking changes, provide guidance in the release notes about what people will have to change in their projects**
+4. [Publish the NPM package](https://docs.npmjs.com/getting-started/publishing-npm-packages) (`npm publish`). If you don't yet have access to update the npm package, have someone in the design team [add you as an owner](https://docs.npmjs.com/cli/owner).
+5. Publish any documentation changes to http://fac.github.io/origin: `grunt publish`
 
 #### Let people know, consider upgrading other projects
 
