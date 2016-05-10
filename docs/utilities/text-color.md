@@ -474,3 +474,22 @@ New colors should be added only when they’re actually being used in a componen
 }
 {% endexample %}
 </div>
+
+
+<div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
+  <div class="DocsExample-preview DocsExample-preview--fa-blue u-text-color--fa-white">
+    The fa-white color for text
+  </div>
+<div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
+{% example html %}
+<div class="u-text-color--fa-white">
+  The fa-white color for text
+</div>
+{% endexample %}
+{% example scss %}
+.MyComponent {
+  @include text-color(fa-white);
+}
+{% endexample %}
+</div>
+</div>
