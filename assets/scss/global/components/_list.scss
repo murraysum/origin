@@ -23,8 +23,8 @@
 }
 
 .List--dashed {
+  @include padding-left(large);
   margin-left: 0;
-  padding-left: 1.5rem;
 }
 
 .List--dashed--indented {
