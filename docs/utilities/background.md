@@ -581,6 +581,22 @@ These are the background colors we’re using in production — no more. All col
   </div>
 
 
+  <div class="DocsExample DocsExample--grouped DocsExample--labelMixins DocsExample--renderHidden">
+    <div class="DocsExample-preview DocsExample-preview--fa-white">
+      &nbsp;
+    </div>
+{% example scss %}
+@include background-color(fa-white);
+{% endexample %}
+  </div>
+
+  <div class="DocsExample DocsExample--labelUtilityClasses DocsExample--renderHidden">
+{% example html %}
+<div class="u-background-color--fa-white"></div>
+{% endexample %}
+  </div>
+
+
 </section>
 
 ### Other utility classes
