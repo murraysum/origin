@@ -1,0 +1,149 @@
+/* Card component
+========================================================================== */
+
+/**
+ * Cards are self-contained modules of text and, optionally, media. They
+ * automatically expand to fit the width of their parent container, but can be
+ * constrained using our Grid component.
+ */
+
+.Card {
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, .22));
+  @include border-radius(small);
+  background-color: #fff;
+}
+
+.CardGroup .Card {
+  @include border-bottom(default, gray-15);
+}
+
+.CardGroup .Card:first-child {
+  @include border-radius-top-left(small);
+  @include border-radius-top-right(small);
+}
+
+.CardGroup .Card:last-child {
+  @include border-radius-bottom-left(small);
+  @include border-radius-bottom-right(small);
+  border-bottom: 0;
+}
+
+/**
+ * Cards that aren't interactive get a different visual treatment
+ */
+
+.Card--notInteractive {
+  @include background-color(gray-16);
+  @include box-shadow(0, 0, 2px, rgba(0, 0, 0, .14));
+}
+
+/**
+ * The parent of a sibling sits above it's siblings and has amended shadow which
+ * better suits the stacked cards
+ */
+
+.Card--sibling--parent {
+  @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, .18));
+  position: relative;
+}
+
+.Card--text-align--center {
+  text-align: center;
+}
+
+/**
+ * Card body
+ *
+ * 1. Inherit the bottom-left and bottom-right border-radii from the parent `Card`
+ */
+
+.Card-body {
+  @include padding(default);
+  /* 1 */
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.CardGroup .Card,
+.CardGroup .Card .Card-body {
+  border-radius: 0;
+}
+
+.CardGroup .Card:first-child .Card-body {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.Card-body::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.Card-body *:last-child {
+  margin-bottom: 0;
+}
+
+.Card-body--max-width {
+  max-width: 38em;
+}
+
+/**
+ * Header area for a ViewItem
+ *
+ * 1. Inherit the top-left and top-right border-radii from the parent `Card`
+ */
+
+.Card-header {
+  @include padding(default);
+  @include background-color(fa-blue);
+  /* 1 */
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  display: table;
+  width: 100%;
+}
+
+/**
+ * Force Card headers to contain their floated children
+ */
+
+.Card-header::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/**
+ * Base styles for titles within Cards
+ */
+
+.Card-header-title {
+  @include font-size(large);
+  @include Heading(#fff, default, x-large, light, default);
+  margin-bottom: 0;
+  color: #fff;
+}
+
+/**
+ * Float actions within Card headers to the right by default
+ */
+
+.Card-header-action {
+  display: block;
+  float: right;
+  position: relative;
+}
+
+/**
+*
+*/
+.Card-media {
+  margin: 0;
+}
+
+.Card-media-item {
+  display: block;
+  height: auto;
+  width: 100%;
+}

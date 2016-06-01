@@ -15,6 +15,18 @@
  * https://github.com/fac/origin/blob/master/README.md
  */
 
+ /* Mixins */
+ @import "mixins/_heading";
+
+/* Local: font settings — copy file if implementing Origin into a project */
+@import "local/fonts/_font-settings";
+
+/* Global: functions to handle fonts correctly based on font settings */
+@import "global/fonts/_font-functions";
+
+/* Global: load fonts for `@font-face` use */
+@import "global/fonts/_source-sans-pro";
+
 /* Local: utility settings — copy file if implementing Origin into a project */
 @import "local/utilities/_utility-settings";
 
@@ -36,6 +48,7 @@
 
 /* Global: import any required components; comment out those not required */
 @import "global/components/_button";
+@import "global/components/_card";
 @import "global/components/_grid";
 @import "global/components/_block-grid";
 @import "global/components/_heading";
