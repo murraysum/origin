@@ -38,7 +38,7 @@ Note that [scss-lint](https://github.com/brigade/scss-lint) will check for SCSS 
 
 Example:
 
-{% highlight scss %}
+<% code("scss") do %>
 /**
  * Comment for the rule set below
  */
@@ -60,14 +60,14 @@ p + p,
 h3 > p {
   @include margin-bottom(large);
 }
-{% endhighlight %}
+<% end %>
 
 #### CSS declaration order
 `@include` rules are declared first, as they are our first class citizens; our own properties and values as derived from our [utilities]({{ site.github.repo }}/blob/master/assets/scss/global/utilities/utilities). Regular CSS declarations are listed afterwards. Be sure to write all `@include` and regular CSS rules in alphabetical order.
 
 Example:
 
-{% highlight scss %}
+<% code("scss") do %>
 .MyComponent {
   @include background-color(gray-13);
   @include font-family(default);
@@ -77,30 +77,30 @@ Example:
   display: inline-block;
   opacity: .5;
 }
-{% endhighlight %}
+<% end %>
 
 #### Exceptions and deviations
 Large blocks of single declarations can use a slightly different, single-line format. In this case, a space should be included after the opening brace and before the closing brace.
 
 Example:
 
-{% highlight scss %}
+<% code("scss") do %>
 .selector-1 { width: 10%; }
 .selector-2 { width: 20%; }
 .selector-3 { width: 30%; }
-{% endhighlight %}
+<% end %>
 
 Long, comma-separated property values—such as collections of gradients or shadows—can be arranged across multiple lines in an effort to improve readability and produce more useful diffs.
 
 Example:
 
-{% highlight scss %}
+<% code("scss") do %>
 @mixin multiple-background-thing {
   background:
     repeat-x top left / 100% 1px image-url("hairline-horizontal.png"),
     repeat-x bottom left / 100% 1px image-url("hairline-horizontal.png");
 }
-{% endhighlight %}
+<% end %>
 
 ### CSS comments
 Every CSS rule set should have a comment stating what it does, why it exists and why it’s been implemented the way it has. Don’t leave others guessing about the decisions you’ve made.
@@ -117,7 +117,7 @@ Comment style should be simple and consistent:
 
 Example:
 
-{% highlight scss %}
+<% code("scss") do %>
 /**
  * Short description using Doxygen-style comment format
  *
@@ -143,14 +143,14 @@ Example:
    ========================================================================== */
 
 /* Basic comment */
-{% endhighlight %}
+<% end %>
 
 When using thematic blocks in CSS comments, there can be variance of spacing — use 2 spaces between thematic blocks if majority of declarations use one-line comments.
 
 ### CSS practical example
 An example of various conventions.
 
-{% highlight scss %}
+<% code("scss") do %>
 /**
  * Segmented control
  *
@@ -211,7 +211,7 @@ An example of various conventions.
   color: darken($color--base, 10%);
   border-color: darken($color--base, 10%);
 }
-{% endhighlight %}
+<% end %>
 
 ## HTML
 
@@ -226,13 +226,13 @@ An example of various conventions.
 
 Example (uses JSX syntax):
 
-{% highlight html %}
+<% code("html") do %>
 <div className="TableView">
   <div className="TableView-cell">
     <button disabled>Send</button>
   </div>
 </div>
-{% endhighlight %}
+<% end %>
 
 #### HTML class and attribute order
 Component classes (including their `--modifierName` classes) should always be listed first, in alphabetical order. `u-UtilityName` classes should be listed last, except when temporary `is-stateOfComponent` are being applied, in which case they should be listed last.
@@ -241,14 +241,14 @@ HTML attributes should be listed in alphabetical order.
 
 Example (uses JSX syntax):
 
-{% highlight html %}
+<% code("html") do %>
 <div className="TableView-cell TableView-cell--borderBottomNone u-textWeight--medium is-disabled" data-ui-component="tableview-cell">
-{% endhighlight %}
+<% end %>
 
 ### HTML practical example
 An example of various conventions (uses JSX syntax):
 
-{% highlight html %}
+<% code("html") do %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -285,6 +285,6 @@ An example of various conventions (uses JSX syntax):
     </ViewContent>
   </body>
 </html>
-{% endhighlight %}
+<% end %>
 
 This documentation and the conventions in it are based on [SUITCSS HTML/CSS code style](https://github.com/suitcss/suit/blob/master/doc/STYLE.md). Many thanks to [Nicolas Gallagher](https://github.com/necolas).

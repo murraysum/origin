@@ -15,18 +15,18 @@ The base class name (e.g., `MyComponent`) reserves a namespace that can only be 
 All selectors in a component file must start with the component namespace. For example, a component called `MyComponent` could have the following CSS, where every selector starts with the string `MyComponent`.
 
 <div class="DocsExample ">
-{% highlight scss %}
+<% code("scss") do %>
 .MyComponent
 .MyComponent--someVariant
 .MyComponent-childOne
 .MyComponent-child-childOfChild
-{% endhighlight %}
+<% end %>
 </div>
 
 Each class provides a hook to style specific elements within the HTML definition.
 
 <div class="DocsExample ">
-{% highlight html %}
+<% code("html") do %>
 <article class="MyComponent">
   <h1 class="MyComponent-title"></h1>
   <img class="MyComponent-image" src="" alt="">
@@ -34,7 +34,7 @@ Each class provides a hook to style specific elements within the HTML definition
     <span class="MyComponent-time"></span>
   </p>
 </div>
-{% endhighlight %}
+<% end %>
 </div>
 
 
@@ -53,9 +53,9 @@ should seek to answer the following questions:
 ## Naming components
 Syntax:
 
-{% highlight bash %}
+<% code("bash") do %>
 <ComponentName>[--modifierName|-childName]
-{% endhighlight %}
+<% end %>
 
 Component names should be in upper camel case. In addition to no other elements of our HTML & CSS using upper camel case, there are several benefits:
 
@@ -67,21 +67,21 @@ Component names should be in upper camel case. In addition to no other elements 
 #### Base class name
 
 <div class="DocsExample ">
-{% highlight scss %}
+<% code("scss") do %>
 .MyComponent
 .TableView
 .DropdownMenu
 .Button
 .Card
-{% endhighlight %}
+<% end %>
 </div>
 
 <div class="DocsExample ">
-{% highlight html %}
+<% code("html") do %>
 <div class="MyComponent">
   …
 </div>
-{% endhighlight %}
+<% end %>
 </div>
 
 #### Variant/modifier class names
@@ -93,19 +93,19 @@ A component modifier is a class that modifies the presentation of the base compo
 * Include modifiers _in addition_ to the base component class
 
 <div class="DocsExample ">
-{% highlight scss %}
+<% code("scss") do %>
 /* Core `SegmentedControl` styles */
 .SegmentedControl {}
 
 /* High-contrast `SegementedControl` styles */
 .SegmentedControl--contrastHigh {}
-{% endhighlight %}
+<% end %>
 </div>
 
 <div class="DocsExample ">
-{% highlight html %}
+<% code("html") do %>
 <div class="SegmentedControl SegmentedControl--contrastHigh">…</div>
-{% endhighlight %}
+<% end %>
 </div>
 
 
@@ -114,14 +114,14 @@ A component modifier is a class that modifies the presentation of the base compo
 A component child is a class that is attached to a child node of a component. It's responsible for applying presentation directly to the child on behalf of a particular component. Write child names in lower camel case.
 
 <div class="DocsExample ">
-{% highlight html %}
+<% code("html") do %>
 <ol class="TableView">
   <li class="TableView-cell">
     <h3 class="TableView-cell-title">…</h3>
     <h4 class="TableView-cell-label">…</h4>
   </li>
 </ol>
-{% endhighlight %}
+<% end %>
 </div>
 
 #### State class names
@@ -133,18 +133,18 @@ This means that the same state names can be used in multiple contexts, but every
 Don't use `is-stateName` classes when you should be using a `ComponentName--modifierName` class. `is-stateName` classes should only be used for **temporary** states (e.g. don't use `is-flash` to create a flash notice when it should actually be `Notice--flash`).
 
 <div class="DocsExample ">
-{% highlight scss %}
+<% code("scss") do %>
 .DropdownMenu {}
 .DropdownMenu.is-expanded {}
-{% endhighlight %}
+<% end %>
 </div>
 
 <div class="DocsExample ">
-{% highlight html %}
+<% code("html") do %>
 <div class="DropdownMenu is-expanded">
   …
 </div>
-{% endhighlight %}
+<% end %>
 </div>
 
 ### Styling dependencies

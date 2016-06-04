@@ -13,19 +13,19 @@ Set in upper camel case. Each component reserves a namespace that can only be us
 
 [Learn more about component syntax]({{ site.baseurl }}/guidance/components/)
 
-{% highlight scss %}
+<% code("scss") do %>
 .ComponentName {}
 .NavBar {}
-{% endhighlight %}
+<% end %>
 
 
 ## Layout components
 Set in upper camel case and `l-` namespaced to signal that they’re purely concerned with layout rather than functional or interaction behaviour.
 
-{% highlight scss %}
+<% code("scss") do %>
 .l-ComponentName {}
 .l-Container {}
-{% endhighlight %}
+<% end %>
 
 
 ## Utilities
@@ -34,14 +34,14 @@ Set in regular, lowercase CSS syntax because they typically only manipulate a si
 [Learn more about utility syntax]({{ site.baseurl }}/guidance/utilities/)
 
 ### Using utilities in `.scss` files
-{% highlight scss %}
+<% code("scss") do %>
 .SomeComponent {
   @include background-color(fa-blue);
   @include margin(large);  
 }
-{% endhighlight %}
+<% end %>
 
 ### Using utilities in HTML
-{% highlight html %}
+<% code("html") do %>
 <div class="u-background-color--fa-blue u-margin--large"></div>
-{% endhighlight %}
+<% end %>
