@@ -6,37 +6,37 @@ Multiple teams working on multiple web products require a rigorous design system
 
 We want predictable results, written in a consistent way, according to agreed global values. We also want to keep CSS approachable for those less experienced and make it harder to incur technical debt, while ensuring it's easy to evolve our system as we learn (and make) more.
 
-See [principles]({{ site.baseurl }}/guidance/principles) for more details.
+See [principles](/guidance/principles) for more details.
 
 
 ## Quick examples
 
 ### Before
 <div class="DocsExample ">
-{% highlight scss %}
-.pricing-panel {
-  border: 1px solid #ddd;
-  color: #333;
-  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 140%;
-  padding: 1rem 0.5rem;
-}
-{% endhighlight %}
+  <% code("scss") do %>
+    .pricing-panel {
+      border: 1px solid #ddd;
+      color: #333;
+      font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 140%;
+      padding: 1rem 0.5rem;
+    }
+  <% end %>
 </div>
 
 ### After
 <div class="DocsExample ">
-{% highlight scss %}
-.Card {
-  @include border(default, gray-13);
-  @include font-family(default);
-  @include font-size(default);
-  @include line-height(default);
-  @include padding(default small);
-  @include text-color(default);
-}
-{% endhighlight %}
+  <% code("scss") do %>
+    .Card {
+      @include border(default, gray-13);
+      @include font-family(default);
+      @include font-size(default);
+      @include line-height(default);
+      @include padding(default small);
+      @include text-color(default);
+    }
+  <% end %>
 </div>
 
 
@@ -164,14 +164,14 @@ The examples above show the two methods of using Origin: Sass utility mixins, or
 
 Classes are great for experimentation; for ‘sketching’ ideas or quickly hacking at some existing CSS before directly editing it. But we always want to be thinking of our CSS in terms of reusable components. For this reason mixins are preferred.
 
-See [utilities documentation]({{ site.baseurl }}/guidance/utilities) for more details.
+See [utilities documentation](/guidance/utilities) for more details.
 
 
 ## Components
 
 We group together utility mixins under common namespaces to create components that perform specific functions. Building components instead of simply using utility classes everywhere encourages a more systemic approach.
 
-See [components documentation]({{ site.baseurl }}/guidance/components) for more details.
+See [components documentation](/guidance/components) for more details.
 
 
 ## Naming conventions
@@ -180,4 +180,4 @@ Origin uses specific naming conventions based on [SUIT CSS](https://suitcss.gith
 
 `ComponentNames` are clearly identified by their upper camel case syntax. `u-utility-classes` follow the syntax conventions of regular CSS, as that’s what they manipulate.
 
-See [naming conventions]({{ site.baseurl }}/guidance/naming-conventions) for more details.
+See [naming conventions](/guidance/naming-conventions) for more details.

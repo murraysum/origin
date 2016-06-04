@@ -1,0 +1,14 @@
+<% wrap_layout :default do %>
+  <div class="Grid-row">
+
+    <div class="Grid-col md-11">
+      <h1 class="page-title">
+        <%= current_page.data.title %>
+      </h1>
+      <div class="markdown-body">
+        <%= yield %>
+      </div>
+    </div>
+
+  </div>
+<% end %>

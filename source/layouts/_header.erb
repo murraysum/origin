@@ -1,0 +1,18 @@
+<header class="masthead">
+  <div class="u-padding--large">
+    <div class="Grid-row">
+      <div class="Grid-col md-3">
+        <a href="/" class="masthead-logo">
+          Origin
+        </a>
+      </div>
+      <div class="Grid-col md-9">
+        <nav class="masthead-nav">
+          <%= link_to "About", "/about", :class => current_page.data.title == "About" ? "active" : nil %>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

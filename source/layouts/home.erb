@@ -1,18 +1,17 @@
-{% include _head.html %}
+<%= partial "layouts/head" %>
 
 <div class="SplitView">
 
   <div class="SplitView-primary">
-    {% include _header.html %}
+    <%= partial "/layouts/header" %>
     <div class="SplitView-primary-content">
-      {{ content }}
+      <%= yield %>
     </div>
   </div>
 
   <div class="SplitView-secondary">
     <div class="SplitView-secondary-content">
-      {% include _sidenav.html %}
+      <%= partial "layouts/sidenav" %>
     </div>
   </div>
-
 </div>

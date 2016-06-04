@@ -1,0 +1,19 @@
+<% wrap_layout :default do %>
+  <div class="Grid-row Grid-row--large">
+
+    <div class="Grid-col">
+      <div class="l-limitTextWidth">
+        <h1 class="page-title">
+          <%= current_page.data.title %>
+        </h1>
+
+        <%= partial "layouts/scss-file-link" %>
+
+        <div class="markdown-body">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<% end %>

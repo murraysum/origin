@@ -1,22 +1,14 @@
 <h4 class="menu-title">
-  <a href="{{ site.baseurl }}/guidance/components/">
-    Components
-  </a>
+  <%= link_to "Components", "/guidance/components/" %>
 </h4>
 <nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'components' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
+  <% sitemap.resources.select { |resource| resource.data.categories == "components" }.each do |resource| %>
+    <%= link_to resource.data.title, resource.url, :class => "menu-item" %>
+  <% end %>
 </nav>
 
 <h4 class="menu-title">
-  <a href="{{ site.baseurl }}/guidance/utilities/">
-    Utilities
-  </a>
+  <%= link_to "Utilities", "/guidance/utilities/" %>
 </h4>
 <nav class="menu docs-menu">
   <a class="menu-item {% if page.title == "Button" %}selected{% endif %}" href="{{ site.baseurl }}/components/button/">
@@ -61,24 +53,16 @@
   <span class="menu-item">
     TextInput
   </span>
-  {% for page in site.pages %}
-    {% if page.categories contains 'utilities' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
+  <% sitemap.resources.select { |resource| resource.data.categories == "utilities" }.each do |resource| %>
+    <%= link_to resource.data.title, resource.url, :class => "menu-item" %>
+  <% end %>
 </nav>
 
 <h4 class="menu-title">
   Guidance
 </h4>
 <nav class="menu docs-menu">
-  {% for page in site.pages %}
-    {% if page.categories contains 'guidance' %}
-    <a class="menu-item" href="{{ page.url | prepend:site.baseurl }}">
-      {{ page.title }}
-    </a>
-    {% endif %}
-  {% endfor %}
+  <% sitemap.resources.select { |resource| resource.data.categories == "guidance" }.each do |resource| %>
+    <%= link_to resource.data.title, resource.url, :class => "menu-item" %>
+  <% end %>
 </nav>
