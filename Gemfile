@@ -11,3 +11,6 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
 gem "middleman-syntax"
+
+# Deployment
+gem "middleman-deploy", github: "middleman-contrib/middleman-deploy", branch: "master"
