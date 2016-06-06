@@ -8,7 +8,6 @@
 # Page options, layouts, aliases and proxies
 ###
 
-
 activate :directory_indexes
 activate :syntax
 
@@ -44,7 +43,7 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
-  set :http_prefix, "/origin"
+  set :relative_links, true
 end
 
 activate :deploy do |deploy|
