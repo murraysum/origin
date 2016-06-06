@@ -44,6 +44,7 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
   set :relative_links, true
+  set :http_prefix, "/origin"
 end
 
 activate :deploy do |deploy|
