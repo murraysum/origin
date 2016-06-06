@@ -44,7 +44,7 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
-  config[:http_prefix] = "/origin"
+  set :http_prefix, "/origin"
 end
 
 activate :deploy do |deploy|
