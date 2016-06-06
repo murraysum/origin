@@ -11,22 +11,22 @@
   <%= link_to "Utilities", "/guidance/utilities/" %>
 </h4>
 <nav class="menu docs-menu">
-  <a class="menu-item {% if page.title == "Button" %}selected{% endif %}" href="{{ site.baseurl }}/components/button/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "Button" %>" href="{{ site.baseurl }}/components/button/">
     Button
   </a>
-  <a class="menu-item {% if page.title == "Card" %}selected{% endif %}" href="{{ site.baseurl }}/components/card/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "Card" %>" href="{{ site.baseurl }}/components/card/">
     Card
   </a>
   <span class="menu-item">
     Checkbox
   </span>
-  <a class="menu-item {% if page.title == "Heading" %}selected{% endif %}" href="{{ site.baseurl }}/components/heading/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "Heading" %>" href="{{ site.baseurl }}/components/heading/">
     Heading
   </a>
   <span class="menu-item">
     List
   </span>
-  <a class="menu-item {% if page.title == "NavBar" %}selected{% endif %}" href="{{ site.baseurl }}/components/navbar/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "NavBar" %>" href="{{ site.baseurl }}/components/navbar/">
     NavBar
   </a>
   <span class="menu-item">
@@ -35,10 +35,10 @@
   <span class="menu-item">
     RadioButton
   </span>
-  <a class="menu-item {% if page.title == "Segmented Control" %}selected{% endif %}" href="{{ site.baseurl }}/components/segmented-control/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "Segmented Control" %>" href="{{ site.baseurl }}/components/segmented-control/">
     Segmented Control
   </a>
-  <a class="menu-item {% if page.title == "Table" %}selected{% endif %}" href="{{ site.baseurl }}/components/table/">
+  <a class="menu-item <%= "selected" if current_page.data.title == "Table" %>" href="{{ site.baseurl }}/components/table/">
     Table
   </a>
   <span class="menu-item">
