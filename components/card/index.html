@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="FreeAgent" />
+
+    <title>
+      Card &middot; Origin
+    </title>
+
+    <!-- FIX ME -->
+    <link rel="stylesheet" href="http://fac.github.io/origin/assets/css/origin.css" />
+    <link href="/images/favicon.ico" rel="shortcut" type="image/x-icon" />
+
+    <!-- Typekit embed code for Effra and Swister -->
+    <script src="https://use.typekit.net/hnj7chl.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+
+
+<header class="masthead">
+  <div class="u-padding--large">
+    <div class="Grid-row">
+      <div class="Grid-col md-3">
+        <a href="/" class="masthead-logo">
+          Origin
+        </a>
+      </div>
+      <div class="Grid-col md-9">
+        <nav class="masthead-nav">
+          <a href="/about">About</a>
+          <a href="https://github.com/fac/origin" target="_blank">GitHub</a>
+          <a href="https://github.com/fac/origin/blob/master/README.md#install" target="_blank">Install</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <div class="Grid-row">
+
+    <div class="Grid-col md-9 md-push-3">
+      <h1 class="page-title">
+        Card
+      </h1>
+
+        <p>
+    <a class="Button Button--outline" href="{{ site.github.repo }}/tree/master/assets/scss/global/components/{{ page.scss-filename }}">View SCSS source</a>
+  </p>
+
+
+
+      <div class="markdown-body">
+        <p>Cards are self-contained modules of text and, optionally, media. They automatically expand to fit the width of their parent container, but can be constrained using our Grid component.</p>
+
+<p>Cards always work best on a light gray or blue background.</p>
+
+<p>Dev note: does this represent a new class of Origin item, a <em>real</em> component? Are all others just now really just elements?</p>
+
+<h2 id="simple">Simple</h2>
+<div class="u-background-color--gray-16">
+{% example html %}
+<div class="Card">
+  <header class="Card-header">
+    <h3 class="Card-header-title">
+      Heading
+    </h3>
+  </header>
+  <div class="Card-body">
+    <div class="Card-body--max-width">
+      <p>
+        The `Card-body` is where the bulk of the written content for the card lives. It has a white background to ensure it's always displayed consistently. The `Card-body--max-width` child element ensures content can always be limited to a sensible width for reading.
+      </p>
+      <a class="Button Button--primary" href="#" role="button">
+        Link button
+      </a>
+    </div>
+  </div>
+</div>
+{% endexample %}
+</div>
+
+<h2 id="centre-aligned-text">Centre aligned text</h2>
+<div class="u-background-color--gray-16">
+{% example html %}
+<div class="Card Card--text-align--center">
+  <header class="Card-header">
+    <h3 class="Card-header-title">
+      Limited Company
+    </h3>
+  </header>
+  <div class="Card-body">
+    <h4 class="Heading Heading--large Heading--space--large">
+      <span class="u-font-size--xx-large u-text-color--fa-blue">&pound;29</span><span class="u-font-weight--light u-text-color--fa-blue">/month</span> <span class="u-font-weight--light u-text-color--gray-7">+ VAT</span>
+    </h4>
+    <p>
+      <a class="Button Button--primary" href="https://signup.freeagent.com" role="button" title="Try FreeAgent as a Limited Company">
+      Try FreeAgent
+      </a>
+    </p>
+    <p class="u-margin-bottom--0">
+      All the great FreeAgent <a href="http://www.freeagent.com/tour/dashboard">features</a> and our free award-winning support
+    </p>
+    <p class="u-font-weight--semi-bold u-margin-bottom--0 u-text-color--fa-green">
+      +
+    </p>
+    <ul class="List List--bare">
+      <li>Corporation Tax</li>
+      <li>Dividend Vouchers</li>
+    </ul>
+  </div>
+</div>
+{% endexample %}
+</div>
+
+<h2 id="with-image">With image</h2>
+<div class="u-background-color--gray-16">
+{% example html %}
+<div class="Card">
+  <header class="Card-header">
+    <h3 class="Card-header-title">
+      Heading
+    </h3>
+  </header>
+  <figure class="Card-media">
+    <img class="Card-media-item" src="http://www.fillmurray.com/460/300" alt="Bill Murray with daisies" />
+  </figure>
+  <div class="Card-body">
+    <div class="Card-body--max-width">
+      <p>
+        When you sign up, our UK-based and super-friendly Support Accountants are on hand
+        to guide you through the set-up process. And once you’re using FreeAgent, they’re right
+        there if you need them.
+      </p>
+      <a class="Button Button--primary" href="#" role="button">
+        Link button
+      </a>
+    </div>
+  </div>
+</div>
+{% endexample %}
+</div>
+
+<h2 id="card-groups">Card groups</h2>
+<div class="u-background-color--gray-16">
+{% example html %}
+<div class="CardGroup">
+  <div class="Card">
+    <header class="Card-header">
+      <h3 class="Card-header-title">
+        Heading
+      </h3>
+    </header>
+    <div class="Card-body">
+      <p>
+        Cards can be grouped together, joined such that they appear as one whole unit. The first and last Cards have their styles amended.
+      </p>
+    </div>
+  </div>
+  <div class="Card">
+    <div class="Card-body">
+      <p>
+        Cards can be grouped together, joined such that they appear as one whole unit. The first and last Cards have their styles amended.
+      </p>
+    </div>
+  </div>
+  <div class="Card">
+    <div class="Card-body">
+      <p>
+        When you sign up, our UK-based and super-friendly Support Accountants are on hand
+        to guide you through the set-up process. And once you’re using FreeAgent, they’re right
+        there if you need them.
+      </p>
+    </div>
+  </div>
+</div>
+{% endexample %}
+</div>
+
+      </div>
+    </div>
+    <div class="Grid-col md-3 md-pull-9">
+      <h4 class="menu-title">
+  <a href="/guidance/components/">Components</a>
+</h4>
+<nav class="menu docs-menu">
+    <a class="menu-item" href="/origin/components/block-grid/">Block Grid</a>
+    <a class="menu-item" href="/origin/components/button/">Button</a>
+    <a class="menu-item" href="/origin/components/card/">Card</a>
+    <a class="menu-item" href="/origin/components/grid/">Grid</a>
+    <a class="menu-item" href="/origin/components/heading/">Heading</a>
+    <a class="menu-item" href="/origin/components/navbar/">NavBar</a>
+    <a class="menu-item" href="/origin/components/segmented-control/">Segmented Control</a>
+    <a class="menu-item" href="/origin/components/table/">Table</a>
+</nav>
+
+<h4 class="menu-title">
+  <a href="/guidance/utilities/">Utilities</a>
+</h4>
+<nav class="menu docs-menu">
+  <a class="menu-item " href="{{ site.baseurl }}/components/button/">
+    Button
+  </a>
+  <a class="menu-item selected" href="{{ site.baseurl }}/components/card/">
+    Card
+  </a>
+  <span class="menu-item">
+    Checkbox
+  </span>
+  <a class="menu-item " href="{{ site.baseurl }}/components/heading/">
+    Heading
+  </a>
+  <span class="menu-item">
+    List
+  </span>
+  <a class="menu-item " href="{{ site.baseurl }}/components/navbar/">
+    NavBar
+  </a>
+  <span class="menu-item">
+    Notice
+  </span>
+  <span class="menu-item">
+    RadioButton
+  </span>
+  <a class="menu-item " href="{{ site.baseurl }}/components/segmented-control/">
+    Segmented Control
+  </a>
+  <a class="menu-item " href="{{ site.baseurl }}/components/table/">
+    Table
+  </a>
+  <span class="menu-item">
+    TableView
+  </span>
+  <span class="menu-item">
+    Tabs
+  </span>
+  <span class="menu-item">
+    TextArea
+  </span>
+  <span class="menu-item">
+    TextInput
+  </span>
+    <a class="menu-item" href="/origin/utilities/background/">background</a>
+    <a class="menu-item" href="/origin/utilities/border-radius/">border-radius</a>
+    <a class="menu-item" href="/origin/utilities/border/">border</a>
+    <a class="menu-item" href="/origin/utilities/box-shadow/">box-shadow</a>
+    <a class="menu-item" href="/origin/utilities/box-sizing/">box-sizing</a>
+    <a class="menu-item" href="/origin/utilities/breakpoint/">breakpoint</a>
+    <a class="menu-item" href="/origin/utilities/clear/">clear</a>
+    <a class="menu-item" href="/origin/utilities/display/">display</a>
+    <a class="menu-item" href="/origin/utilities/flex-align-content/">flex-align-content</a>
+    <a class="menu-item" href="/origin/utilities/flex-align-items/">flex-align-items</a>
+    <a class="menu-item" href="/origin/utilities/flex-align-self/">flex-align-self</a>
+    <a class="menu-item" href="/origin/utilities/flex-basis/">flex-basis</a>
+    <a class="menu-item" href="/origin/utilities/flex-direction/">flex-direction</a>
+    <a class="menu-item" href="/origin/utilities/flex-flow/">flex-flow</a>
+    <a class="menu-item" href="/origin/utilities/flex-grow/">flex-grow</a>
+    <a class="menu-item" href="/origin/utilities/flex-justify-content/">flex-justify-content</a>
+    <a class="menu-item" href="/origin/utilities/flex-order/">flex-order</a>
+    <a class="menu-item" href="/origin/utilities/flex-shrink/">flex-shrink</a>
+    <a class="menu-item" href="/origin/utilities/flex-wrap/">flex-wrap</a>
+    <a class="menu-item" href="/origin/utilities/flex/">flex</a>
+    <a class="menu-item" href="/origin/utilities/flexbox/">flexbox</a>
+    <a class="menu-item" href="/origin/utilities/float/">float</a>
+    <a class="menu-item" href="/origin/utilities/font-family/">font-family</a>
+    <a class="menu-item" href="/origin/utilities/font-size/">font-size</a>
+    <a class="menu-item" href="/origin/utilities/font-weight/">font-weight</a>
+    <a class="menu-item" href="/origin/utilities/height-and-width/">height and width</a>
+    <a class="menu-item" href="/origin/utilities/interaction/">interaction</a>
+    <a class="menu-item" href="/origin/utilities/keyframe-animation/">keyframe animation</a>
+    <a class="menu-item" href="/origin/utilities/letter-spacing/">letter-spacing</a>
+    <a class="menu-item" href="/origin/utilities/line-height/">line-height</a>
+    <a class="menu-item" href="/origin/utilities/linear-gradient/">linear-gradient</a>
+    <a class="menu-item" href="/origin/utilities/list-item-spacing/">list-item-spacing</a>
+    <a class="menu-item" href="/origin/utilities/list-style/">list-style</a>
+    <a class="menu-item" href="/origin/utilities/margin/">margin</a>
+    <a class="menu-item" href="/origin/utilities/opacity/">opacity</a>
+    <a class="menu-item" href="/origin/utilities/overflow/">overflow</a>
+    <a class="menu-item" href="/origin/utilities/padding/">padding</a>
+    <a class="menu-item" href="/origin/utilities/positioning/">positioning</a>
+    <a class="menu-item" href="/origin/utilities/text-color/">text-color</a>
+    <a class="menu-item" href="/origin/utilities/text-decoration/">text-decoration</a>
+    <a class="menu-item" href="/origin/utilities/text-formatting/">text-formatting</a>
+    <a class="menu-item" href="/origin/utilities/transform/">transform</a>
+    <a class="menu-item" href="/origin/utilities/transition/">transition</a>
+    <a class="menu-item" href="/origin/utilities/vertical-align/">vertical-align</a>
+    <a class="menu-item" href="/origin/utilities/visibility/">visibility</a>
+    <a class="menu-item" href="/origin/utilities/z-index/">z-index</a>
+</nav>
+
+<h4 class="menu-title">
+  Guidance
+</h4>
+<nav class="menu docs-menu">
+    <a class="menu-item" href="/origin/guidance/base-styles/">Base styles</a>
+    <a class="menu-item" href="/origin/guidance/code-style/">Code style</a>
+    <a class="menu-item" href="/origin/guidance/components/">Components</a>
+    <a class="menu-item" href="/origin/guidance/naming-conventions/">Naming conventions</a>
+    <a class="menu-item" href="/origin/guidance/principles/">Principles</a>
+    <a class="menu-item" href="/origin/guidance/utilities/">Utilities</a>
+</nav>
+
+    </div>
+
+  </div>
+
+
+    <footer class="u-padding-bottom--large u-padding-top--large u-md-padding-bottom--xx-large u-md-padding-top--xx-large u-text-color--gray-9" role="contentinfo">
+      <div class="Grid-row">
+        <div class="Grid-col">
+          &copy; FreeAgent 2016 &middot; Released under the <a href="https://github.com/fac/origin/blob/master/LICENSE.md">MIT</a> license
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../javascripts/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
+  </body>
+</html>
+
